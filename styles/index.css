@@ -1,0 +1,118 @@
+:root {
+    --primary: #1ed760;
+    --secondary: #1be7ff;
+    --yellow: #ffdd57;
+    --golden: #e8aa14;
+    --orange: #ff5714;
+    --white: #ffffff;
+    --black: #07070A;
+    --gray: #212326;
+}
+
+::selection {
+    color: var(--black);
+    background-color: var(--primary);
+}
+
+@font-face {
+    font-family: 'IcoFont';
+    src: local('icofont'),
+        url('./icofont/icofont.woff2') format('woff2'),
+        url('./icofont/icofont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.module {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.module .columns {
+    align-items: center;
+}
+
+.module h3 {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.module .description {
+    margin-top: 10px;
+}
+
+.module img {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.module figure {
+    border: 3px solid var(--primary);
+    border-radius: 100px;
+}
+
+.center-image {
+    text-align: -webkit-center;
+}
+
+.buy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buy a {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+    padding: 18px 20px;
+    min-height: 64px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    background-color: var(--primary);
+    bottom: 0px;
+
+}
+
+.color-white {
+    color: var(--white);
+}
+
+.visible-answer {
+    display: block;
+}
+
+.invisible-answer {
+    display: none;
+}
+
+.card-header:hover {
+    cursor: pointer!important;
+}
+
+.card {
+    background-color: var(--black)!important;
+    color: var(--white)!important;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+.card-header-title {
+    color: var(--white)!important;
+}
