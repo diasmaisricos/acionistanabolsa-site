@@ -124,3 +124,34 @@ body {
 .card-header-title {
     color: var(--white)!important;
 }
+
+.video {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #15151b;
+}
+
+/*Está otimizado apenas para o mobile
+    .video iframe {
+        width: 90vw;
+        height: 30%;
+    }
+*/
+
+.video .title {
+    text-align: center;
+    color: var(--white);
+    font-size: 5rem;
+}
+
+.title .bolsa {
+    color: #103873;
+}
+
+.title .na {
+    color: var(--white);
+}
