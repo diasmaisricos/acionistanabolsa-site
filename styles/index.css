@@ -135,17 +135,23 @@ body {
     background-color: #15151b;
 }
 
-/*Está otimizado apenas para o mobile
-    .video iframe {
-        width: 90vw;
-        height: 30%;
-    }
-*/
-
 .video .title {
     text-align: center;
     color: var(--white);
     font-size: 5rem;
+}
+
+.video .desktop-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+@media (max-width: 768px) {
+    .video .desktop-media {
+        width: 90vw;
+    }
 }
 
 .title .bolsa {
