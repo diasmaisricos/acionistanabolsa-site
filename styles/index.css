@@ -2,7 +2,7 @@
     --primary: #1ed760;
     --secondary: #1be7ff;
     --yellow: #ffdd57;
-    --golden: #e8aa14;
+    --golden: #ffde39;
     --orange: #ff5714;
     --white: #ffffff;
     --black: #07070A;
@@ -38,6 +38,17 @@ body {
     color: var(--white);
 }
 
+.is-bonus:after {
+    content: "BÔNUS";
+    position: relative;
+    font-size: 0.7rem;
+    background: var(--primary);
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 10px;
+    color: var(--black);
+}
+
 .module {
     padding: 20px;
     margin-bottom: 30px;
@@ -61,9 +72,30 @@ body {
     padding: 20px;
 }
 
-.module figure {
-    border: 3px solid var(--primary);
+.module figure:before {
+    content: "";
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    left: -3px;
+    border: 3px dotted var(--primary);
     border-radius: 100px;
+    transform: translate(-50%,-50%) rotate(0deg);
+    animation: iconRotate 15s cubic-bezier(0.075, 0.82, 0.165, 0.3) infinite;
+}
+
+@keyframes iconRotate {
+    0% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes teste {
+    0% {box-shadow: none;}
+    30% {box-shadow: 0 0 0.2em var(--golden);}
+    60% {box-shadow: 0 0 0.4em var(--golden);}
+    90% {box-shadow: 0 0 0.2em var(--golden);}
+    100% {box-shadow: none;}
 }
 
 .center-image {
@@ -74,6 +106,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.buy-bg {
+    background: url(/assets/images/pagamento-hotmart.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 45px;
 }
 
 .buy a {
@@ -95,7 +134,12 @@ body {
     position: relative;
     background-color: var(--primary);
     bottom: 0px;
+    animation: teste 2s infinite;
+    animation-play-state: paused;
+}
 
+.buy a:hover {
+    animation-play-state: running;
 }
 
 .color-white {
