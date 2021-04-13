@@ -58,7 +58,7 @@ body {
     align-items: center;
 }
 
-.module h3 {
+.module h1 {
     font-weight: bold;
     font-size: larger;
 }
@@ -174,7 +174,7 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background-color: #15151b;
 }
@@ -190,6 +190,85 @@ body {
     justify-content: center;
     align-items: center;
     width: 50vw;
+}
+
+.arrow.animated {
+  position: absolute;
+  margin: auto;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+  height: 4px;
+  width: 4px;
+  border-radius: 2px;
+  background: #fff;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+
+.arrow.animated::before,
+.arrow.animated::after {
+  position: absolute;
+  top: -23px;
+  content: "";
+  height: 30px;
+  width: 4px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.arrow.animated::before {
+  left: -10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform:    rotate(-45deg);
+  -ms-transform:     rotate(-45deg);
+  -o-transform:      rotate(-45deg);
+  transform:         rotate(-45deg);
+}
+
+.arrow.animated::after {
+  right: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform:    rotate(45deg);
+  -ms-transform:     rotate(45deg);
+  -o-transform:      rotate(45deg);
+  transform:         rotate(45deg);
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.price-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: #111b27;
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 @media (max-width: 768px) {
