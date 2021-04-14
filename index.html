@@ -13,15 +13,18 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC6NFN203Z"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-      
+
         gtag('config', 'G-EC6NFN203Z');
-      </script>
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
     <!--PERSONAL JS-->
     <script src="./js/index.js" defer></script>
     <!--PERSONAL CSS-->
-    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./styles/index.min.css"
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="./styles/index.css"
         media="all">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" media="all">
     <!-- META TAGS-->
@@ -45,8 +48,10 @@
 </head>
 
 <body>
-    <div style="display: flex; align-items: center; justify-content: center; width: 100vw; height: 40px; margin: 0; background-color: #163f2d; text-align: center;">
-        <h1 class="title" style="text-align: center; font-family: Alegreya!important; color: #fff; font-weight: 100;">ACIONISTA NA BOLSA</h1>
+    <div
+        style="display: flex; align-items: center; justify-content: center; width: 100vw; height: 40px; margin: 0; background-color: #163f2d; text-align: center;">
+        <h1 class="title" style="text-align: center; font-family: Alegreya!important; color: #fff; font-weight: 100;">
+            ACIONISTA NA BOLSA</h1>
     </div>
     <section class="video">
         <!--<iframe src="https://www.youtube.com/embed/QQzKN11VXW0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
@@ -56,8 +61,8 @@
             </video>
         </div>-->
         <div class="buy buy-hero" style="display: flex; flex-direction: column; align-items: center;">
-            <a rel="noreferrer" href="https://pay.hotmart.com/Y43816117W?split=12&checkoutMode=10"
-                target="_blank">Quero me tornar Acionista na Bolsa</a>
+            <span>Quero
+                me tornar Acionista na Bolsa</span>
         </div>
         <span class="arrow animated bounce" style="color: #163f2d;"></span>
     </section>
@@ -240,8 +245,8 @@
                 </div>
             </div>
             <div class="buy">
-                <a rel="noreferrer" href="https://pay.hotmart.com/Y43816117W?split=12&checkoutMode=10"
-                    target="_blank">Quero me tornar Acionista na Bolsa</a>
+                <span>Quero
+                    me tornar Acionista na Bolsa</span>
             </div>
             <div class="buy-bg"></div>
         </div>
@@ -364,8 +369,8 @@
         </div>
         <div>
             <div class="buy" style="display: flex; flex-direction: column; align-items: center;">
-                <a rel="noreferrer" href="https://pay.hotmart.com/Y43816117W?split=12&checkoutMode=10"
-                    target="_blank">Quero me tornar Acionista na Bolsa</a>
+                <span>Quero
+                    me tornar Acionista na Bolsa</span>
                 <img width="235" height="65" src="/assets/images/pagamento-hotmart.png"
                     alt="Hotmart, Mastercard, Visa, Boleto, Paypal" />
             </div>
@@ -469,11 +474,36 @@
             </div>
         </div>
         <div class="buy" style="margin-top: 20px;">
-            <a rel="noreferrer" href="https://pay.hotmart.com/Y43816117W?split=12&checkoutMode=10" target="_blank">Quero
-                me tornar Acionista na Bolsa</a>
+            <span>Quero
+                me tornar Acionista na Bolsa</span>
         </div>
         <div class="buy-bg"></div>
     </section>
+
+    <!--MODAL-->
+    <div class="modal" id="modal-enjamento">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Digite seu melhor e-mail</p>
+                <button class="delete" id="modal-enjamento-close" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="email" placeholder="E-mail" id="emailInput">
+                        <span class="icon is-small is-left">
+                            <i class="icofont-email"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger is-hidden" id="help-email">E-mail inválido</p>
+                </div>
+            </section>
+            <footer class="modal-card-foot" style="justify-content: flex-end;">
+                <button class="button is-success" id="modal-enjamento-checkout">Ir para checkout</button>
+            </footer>
+        </div>
+    </div>
 </body>
 
 </html>
