@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", function() {
             showAnswer(node)
         })
     }
+    const swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoPlay: true,
+        slidesPerView: 3,
+        spaceBetween: 10,
+        breakpoints: {
+            720: {
+                slidesPerView: 5
+            }
+        }
+    });
+    swiper.autoplay.start();
 });
 
 const showAnswer = function(node) {

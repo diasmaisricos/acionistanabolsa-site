@@ -32,6 +32,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Alegreya';
+    src: url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--black);
@@ -158,7 +166,7 @@ body {
     cursor: pointer!important;
 }
 
-.card {
+.faq .card {
     background-color: var(--black)!important;
     color: var(--white)!important;
     border: 1px solid var(--primary);
@@ -173,10 +181,13 @@ body {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 40px);
     justify-content: center;
     align-items: center;
-    background-color: #15151b;
+    background-image: url('/assets/images/bolsa-company.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .video .title {
@@ -192,16 +203,23 @@ body {
     width: 50vw;
 }
 
+.buy-hero {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 50px;
+}
+
 .arrow.animated {
   position: absolute;
   margin: auto;
   right: 0;
   left: 0;
-  bottom: 50px;
+  bottom: 1px;
   height: 4px;
   width: 4px;
   border-radius: 2px;
-  background: #fff;
+  background: #163f2d;
   animation: bounce 1s infinite alternate;
   -webkit-animation: bounce 1s infinite alternate;
 }
@@ -252,6 +270,14 @@ body {
   }
 }
 
+.swiper-slide .card {
+    background-color: #15151b;
+}
+
+.swiper-slide .card figure img {
+    border-radius: 5%;
+}
+
 .price-section {
   display: flex;
   flex-direction: column;
@@ -269,6 +295,10 @@ body {
   text-align: center;
   width: 100vw;
   height: 100vh;
+}
+
+.swiper-container {
+    width: 95%;
 }
 
 @media (max-width: 768px) {
