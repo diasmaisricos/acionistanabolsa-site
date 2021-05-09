@@ -40,6 +40,11 @@
     font-display: swap;
 }
 
+@font-face{
+    font-family:"bunday-sans-bold";
+    src: url("./fonts/BundaySansBold.otf") format("opentype");
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--black);
@@ -196,10 +201,7 @@ body {
     font-size: 5rem;
 }
 
-.video .desktop-media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.desktop-media {
     width: 50vw;
 }
 
@@ -302,8 +304,15 @@ body {
 }
 
 @media (max-width: 768px) {
-    .video .desktop-media {
-        width: 90vw;
+    .ac-hero-video {
+        width: 90%!important;
+        height: 30%!important;
+    }
+    .ac-hero-ingange h1 {
+        font-size: 1.5rem!important;
+    }
+    .ac-hero {
+        height: 90vh!important;
     }
 }
 
@@ -313,4 +322,48 @@ body {
 
 .title .na {
     color: var(--white);
+}
+
+.ac-hero {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 95vh;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #15151b;
+    font-weight: 900;
+    font-family: "bunday-sans-bold";
+}
+
+.ac-hero-title h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+.ac-hero-ingange h1 {
+    font-size: 2rem;
+}
+
+.ac-hero-ingange span {
+    color: #ccc;
+}
+
+.ac-hero-video {
+    height: 50vh;
+    width: 50vw;
+}
+
+.ac-hero-video .video {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div[class^="video-media-youtube-inner-vi"] {
+    flex: 1;
 }
