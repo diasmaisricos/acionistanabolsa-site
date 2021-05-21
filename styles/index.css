@@ -149,6 +149,7 @@ body {
     bottom: 0px;
     animation: teste 2s infinite;
     animation-play-state: paused;
+    font-family: "bunday-sans-bold";
 }
 
 .buy span:hover {
@@ -312,7 +313,7 @@ body {
         font-size: 1.5rem!important;
     }
     .ac-hero {
-        height: 90vh!important;
+        height: 85vh!important;
     }
 }
 
@@ -328,7 +329,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 95vh;
+    height: 90vh;
     padding: 1rem;
     align-items: center;
     justify-content: space-evenly;
